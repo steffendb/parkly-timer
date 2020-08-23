@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  color: rgb(0, 50, 60);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 92%;
+  width: 1240px;
+}
+
+.logo {
+  fill: rgb(0, 50, 60);
+  margin: 40px 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 40px 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 30px 0 20px 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+}
+
+span {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+form {
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+input,
+button {
+  border-radius: 3px;
+  display: block;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  height: 45px;
+  line-height: 45px;
+  outline: 0;
+  padding: 0 20px;
+}
+
+input {
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+input:focus {
+    border: 1px solid #751659;
+}
+
+button {
+  background-color: #a01e78;
+  border: 1px solid #751659;
+  color: white;
+  cursor: pointer;
+}
+
+.panel {
+    background-color: #eee;
+    border-radius: 3px;
+    display: none;
+    padding: 20px;
+}
+
+.panel.open {
+    display: flex;
+}
+
+.panel > button {
+    margin-right: 10px;
+}
+
+.list-item {
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.list-item:last-child {
+  border-bottom: 1px solid #eee;
+}
