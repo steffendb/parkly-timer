@@ -1,7 +1,7 @@
-const targetPanel = document.getElementById("vouchers");
+const modal = document.getElementById("new");
 
 document.addEventListener('click', function (event) {
-  if (event.target.matches('.toggle')) {
-    targetPanel.classList.toggle("open");
+  if (event.target.matches('.toggle-modal')) {
+    modal.classList.toggle("open");
   }
 }, false);

@@ -12,7 +12,7 @@ html {
 body {
   background-color: white;
   color: rgb(0, 50, 60);
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -28,17 +28,17 @@ body {
 }
 
 h1 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin: 0 0 40px 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
 }
 
 h2 {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.5;
-  margin: 30px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 h3 {
@@ -54,9 +54,23 @@ span {
   margin: 0;
 }
 
+a {
+    cursor: pointer;
+    font-weight: 600;
+}
+
 form {
-    display: flex;
-    margin: 0 0 10px 0;
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+form > button {
+    margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
 }
 
 input,
@@ -64,7 +78,7 @@ button {
   border-radius: 3px;
   display: block;
   font-family: inherit;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   line-height: 45px;
@@ -72,13 +86,43 @@ button {
   padding: 0 20px;
 }
 
-input {
-  border: 1px solid #ccc;
-  margin-right: 10px;
+.new-booking {
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
+input {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.radio {
+  align-items: center;
+  display: flex;
+  padding: 10px 0;
+}
+
+.radio > input {
+    margin: 0 10px 0 0;
+}
+
+.radio > label {
+    margin: 0;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+input[type="radio"]:checked {
+border-color: red;
+  }
+
 input:focus {
-    border: 1px solid #751659;
+  border: 1px solid #751659;
 }
 
 button {
@@ -88,27 +132,65 @@ button {
   cursor: pointer;
 }
 
-.panel {
-    background-color: #eee;
-    border-radius: 3px;
-    display: none;
-    padding: 20px;
+.modal {
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 50, 60, 0.1);
+  padding: 10px;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  overflow: auto;
+  transition: all 100ms;
+  z-index: 2000;
 }
 
-.panel.open {
+.modal > div {
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 50, 60, 0.15);
+  border-radius: 3px;
+  max-width: 100%;
+  padding: 30px;
+  position: relative;
+  width: 360px;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-actions {
+    align-items: center;
     display: flex;
+    margin-top: 20px;
 }
 
-.panel > button {
-    margin-right: 10px;
+.modal-actions > button {
+    margin-right: 40px;
 }
 
 .list-item {
   border-top: 1px solid #eee;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
   padding: 10px 0;
+}
+
+.list-item > h3 {
+  margin-right: 25px;
+}
+
+.list-item > span:last-child {
+  margin-left: auto;
 }
 
 .list-item:last-child {
